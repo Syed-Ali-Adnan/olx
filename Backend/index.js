@@ -12,11 +12,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(cors(
-  {
-    origin: ["https://olx-syed-ali-adnans-projects.vercel.app"],
-    methods:["post","get"],
-    credentials:true
-  }
+  //{
+  //  origin: ["https://olx-syed-ali-adnans-projects.vercel.app"],
+  //  methods:["post","get"],
+  //  credentials:true
+  //}
 ));
 
 app.use(routes);
