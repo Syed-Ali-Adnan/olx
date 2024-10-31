@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.card{
+    border: 1px solid rgb(228, 228, 228);
+    width: 290px;
+    text-align: center;
+    margin-top: 50px;
+}
+.product_img{
+    width: 280px;
+    height: 180px;
+}
+.price{
+    font-weight: bolder;
+}
+.product_name{
+    font-size: 20px;
+}
+.description{
+    color: grey;
+}
+.del_btn{
+    background-color: rgb(241, 159, 159);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 50px;
+}
+.del_btn:hover{
+    background-color: red;
+    cursor: pointer;
+}
+.edit_btn{
+    background-color: rgb(105, 192, 105);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 50px;
+}
+.edit_btn:hover{
+    background-color: green;
+    cursor: pointer;
+}

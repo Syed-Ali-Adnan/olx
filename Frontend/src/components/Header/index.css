@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo{
+    display: flex;
+    gap: 40px;
+    margin: 20px;
+}
+.olx_logo{
+    width: 70px;
+    height: 40px;
+}
+.logoPic{
+    width: 40px;
+    height: 50px;
+}
+
+.motorHeading{
+    display: flex;
+    font-size: 15px;
+}
+
+.propertyHeading{
+    display: flex;
+}
+
+.Logo_Heading{
+    margin-top: 15px;
+}
+.location{
+    width: 300px;
+    height: 40px;
+    border-color: grey;
+    border-radius: 50x;
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-top: 18px;
+}
+.serach_bar{
+    width: 500px;
+    height: 40px;
+    border-color: aqua;
+}
+.login_button{
+    border: none;
+    color: rgb(1, 1, 22);
+    font-size: 20px;
+    background-color: white;
+    text-decoration: underline;
+    padding-left: 30px;
+}
+.login_button:hover{
+font-size: 25px;
+}
+
+.search_logo{
+    width: 40px;
+    height: 40px;
+}
+.search_btn:hover{
+    cursor: pointer;
+}
+.cat{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+.all_cat{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.cat{
+    width: 100px;
+    height: 100px;
+}
+.cat_headiing{
+    padding-left: 20px;
+}
+.banner-wraper{
+    display: flex;
+    justify-content: space-evenly;
+}
+.banner{
+    width: 400px;
+}
+.btn_box{
+    display: flex;
+    margin-top: 10px;
+}
+.search_input_bar{
+    display: flex;
+}
+.sell_btn{
+    border-bottom: 5px solid blue;
+    border-top: 5px solid aqua;
+    border-left: 5px solid yellow;
+    border-right: 5px solid yellow;
+    border-radius: 50px;
+    font-size: 18px;
+    background-color: white;
+    padding: 10px 20px;
+    margin-left: 20px;   
+}
+.sell_btn:hover{
+    cursor: pointer;
+    padding: 15px 25px;
+}
