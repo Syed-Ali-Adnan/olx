@@ -1,11 +1,3 @@
-//import AddsPage from "../../routes/Home/AddsPage"
-//
-//const MyAdd = () =>{
-//  return(
-//    <AddsPage/>
-//  )
-//}
-//export default MyAdd
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { baseUrl } from "../../shared/constant";
@@ -14,6 +6,7 @@ import Card from "../../components/Card";
 import { Modal, Spin } from "antd";
 import { ExclamationCircleFilled } from "@ant-design/icons";
 import Header from "../../components/Header"
+import "./index.css"
 
 const { confirm } = Modal;
 
@@ -80,8 +73,8 @@ const MyAdd = () => {
         ))
       ) : (
         <>
-        <Header/>
-        <h3>No Adds Yet</h3>
+        
+        <h3 className="no_addds">No Adds Yet</h3>
         </>
       )}
     </div>

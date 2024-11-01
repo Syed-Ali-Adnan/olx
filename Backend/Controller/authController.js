@@ -78,13 +78,13 @@ newUser
 }
 
 
-const upadteProfile=(res,req)=>{
+const updateProfile=(req,res)=>{
     const body = req.body;
 
     User.findByIdAndUpdate(body.id,{
         name: body.name,
         profile: body.profile,
-        conatact: body.conatact,
+        contact: body.contact,
         age: body.age,
         address: body.address,
         about: body.about,
@@ -113,4 +113,4 @@ const upadteProfile=(res,req)=>{
 
 }
 
-module.exports = { login, signup ,upadteProfile};
+module.exports = { login, signup ,updateProfile};

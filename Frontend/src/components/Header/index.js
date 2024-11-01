@@ -12,6 +12,7 @@ import banner from "./assets/banner.jpeg"
 import banner2 from "./assets/banner2.jpeg"
 import banner3 from "./assets/banner3.jpeg"
 import search from './assets/search.jpg'
+import profile from './assets/profile.png'
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch,useSelector } from 'react-redux';
@@ -56,6 +57,10 @@ const Header = () => {
           <div className="propertyHeading">
             <img className="logoPic" src={propertyLogo} />
             <h3 className="Logo_Heading">Property</h3>
+          </div>
+          <div className="propertyHeading">
+          <Link to="/profile"><img className="profilePic" src={profile} /></Link>
+          <Link className='profilelink' to="/profile"> <h3 className="profile_Heading">Profile</h3></Link>
           </div>
         </section>
 

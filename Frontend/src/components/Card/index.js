@@ -8,7 +8,7 @@ const Card = (props) => {
   const { add, onDelete } = props;
   const { user } = useSelector((state) => state.userReducer);
   const navigate = useNavigate();
- 
+
   const handleEdit = () => {
     if (add?._id) {
       navigate(`/create-add?addId=${add?._id}`);
@@ -22,32 +22,38 @@ const Card = (props) => {
 
   return (
     <div className="card_wrapper">
-    <div className="card">
-      <div>
-        <img
-          className="product_img"
-          src={add.image || iphone} // Use default image if add.image is missing
-          alt={add.productName || "Product image"}
-        />
+      <div className="card">
+        <div>
+          <img
+            className="product_img"
+            src={add.image || iphone} // Use default image if add.image is missing
+            alt={add.productName || "Product image"}
+          />
+        </div>
+        <h3 className="price">RS.{add.productPrice}</h3>
+        <p className="product_name">{add.productName}</p>
+        <p className="description">{add.description}</p>
+        <p className="description">Karachi, Pakistan</p>
+        <div>
+          <p className="created-at">
+            {add.createdAt
+              ? moment(add.createdAt).fromNow()
+              : "Date unavailable"}
+          </p>
+        </div>
+        <div className="buy_btn">
+          {add.author?._id === user?._id && (
+            <div className="action-button">
+              <button className="edit_btn" onClick={handleEdit}>
+                Edit
+              </button>
+              <button className="del_btn" onClick={onDelete}>
+                Delete
+              </button>
+            </div>
+          )}
+        </div>
       </div>
-      <h3 className="price">RS.{add.productPrice}</h3>
-      <p className="product_name">{add.productName}</p>
-      <p className="description">{add.description}</p>
-      <p className="description">Karachi, Pakistan</p>
-      <div>
-        <p className="created-at">
-          {add.createdAt ? moment(add.createdAt).fromNow() : "Date unavailable"}
-        </p>
-      </div>
-      <div className="buy_btn">
-        {add.author?._id === user?._id && (
-          <div className="action-button">
-            <button className="edit_btn" onClick={handleEdit}>Edit</button>
-            <button className="del_btn" onClick={onDelete}>Delete</button>
-          </div>
-        )}
-      </div>
-    </div>
     </div>
   );
 };
@@ -89,7 +95,7 @@ export default Card;
 //      ) : null}
 //        </div>
 //      </div>
-//      
+//
 //    </>
 //  );
 //};

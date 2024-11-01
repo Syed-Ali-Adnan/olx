@@ -65,8 +65,10 @@ const allAdds = (req,res)=>{
 
 const updateAdds =(req,res)=>{
     const body =req.body;
+console.log( "file =>", req.file);
 
-    if(req.file){
+
+    if(req.file){ 
         uploadImage(req.file)
         .then((result)=>{
             console.log("🚀 ~ .then ~ result:", result);
@@ -75,7 +77,8 @@ const updateAdds =(req,res)=>{
                 productPrice : body.productPrice,
                 category : body.category,
                 description : body.description,
-                image : body.image,
+                //correction chk latter
+                image : result.url,
             })
             .then((response) => {
                 if(response){
